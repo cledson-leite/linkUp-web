@@ -1,0 +1,73 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+/* LIGHT MODE */
+:root {
+  --principal-borda: #2E86AB;
+  --principal-preenchimento: #A8D0E6;
+  --secundario-borda: #F2A365;
+  --secundario-preenchimento: #F9D5B4;
+  --sucesso-borda: #3AA655;
+  --sucesso-preenchimento: #B0EACD;
+  --alerta-borda: #E94F37;
+  --alerta-preenchimento: #F5A8A0;
+  --texto-principal: #444;
+  --texto-secundario: #666;
+  --cinza-escuro: #AAA;
+  --cinza-claro: #DDD;
+  --background: #FFF;
+  --foreground: #444;
+  --tint: #444;
+}
+
+/* DARK MODE OVERRIDE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --principal-borda: #63B3D7;
+    --principal-preenchimento: #305E71;
+    --secundario-borda: #F7B88A;
+    --secundario-preenchimento: #8B6C55;
+    --sucesso-borda: #6ED89F;
+    --sucesso-preenchimento: #355C49;
+    --alerta-borda: #F08070;
+    --alerta-preenchimento: #6A3B38;
+    --texto-principal: #fff;
+    --texto-secundario: #AAA;
+    --cinza-escuro: #444;
+    --cinza-claro: #ddd;
+    --background: #222;
+    --foreground: #fff;
+    --tint: #fff;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Gochi Hand', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
