@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Gochi_Hand } from "next/font/google"
-import './styles/globals.css'
+import { ClerkProvider } from "@clerk/nextjs";
+import './globals.css'
 const gochiHand = Gochi_Hand({
   subsets: ["latin"],
   weight: "400",
@@ -20,9 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={gochiHand.variable}>
-        {children}
-      </body>
+      <ClerkProvider>
+        <body className={gochiHand.variable}>
+          {children}
+        </body>
+      </ClerkProvider>
     </html>
   );
 }

@@ -71,3 +71,7 @@ a {
     color-scheme: dark;
   }
 }
+
+cl-card {
+  background-color: var(--background);
+}
