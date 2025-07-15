@@ -1,0 +1,27 @@
+.background {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+}
+.appName {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Gochi Hand', cursive;
+  color: var(--principal-borda);
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.card {
+  background: var(--background);
+  border: 1.5px solid var(--principal-borda);
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 32px;
+  width: 320px;
+  position: relative;
+} 

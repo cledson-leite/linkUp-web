@@ -1,6 +1,7 @@
-import { SignIn } from '@clerk/nextjs'
-import React from 'react'
+import React from 'react';
+
+import LoginTemplate from '@/app/component/template/LoginTemplate';
 
 export default function LoginPage() {
-  return <SignIn />
+  return <LoginTemplate />;
 }

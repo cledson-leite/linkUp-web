@@ -1,0 +1,76 @@
+.form {
+  font-family: inherit;
+}
+.title {
+  color: var(--principal-borda);
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: 'Gochi Hand', cursive;
+}
+.error {
+  color: var(--alerta-borda);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.socialDivider {
+  text-align: center;
+  color: var(--cinza-escuro);
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+}
+.socialButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  color: var(--principal-borda);
+  border: 2px solid var(--principal-borda);
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.socialButton:hover:not(:disabled) {
+  background: var(--principal-preenchimento);
+  color: var(--background);
+  border-color: var(--principal-preenchimento);
+}
+.socialIcon {
+  font-size: 1.4em;
+}
+.label {
+  color: var(--principal-borda);
+  font-weight: 500;
+  font-family: inherit;
+}
+.buttonEntrar {
+  height: 44px;
+  background: var(--principal-borda);
+  color: #fff;
+  border: 2px solid var(--principal-borda);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  font-family: inherit;
+  width: 100%;
+  margin-top: 8px;
+}
+.buttonEntrar:hover:not(:disabled) {
+  background: var(--principal-preenchimento);
+  color: var(--principal-borda);
+  border-color: var(--principal-preenchimento);
+} 

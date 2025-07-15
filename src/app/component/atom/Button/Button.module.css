@@ -1,0 +1,23 @@
+ .button {
+  height: 44px;
+  background: var(--principal-preenchimento);
+  color: var(--texto-principal);
+  border: 2px solid var(--principal-borda);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  font-family: inherit;
+  width: 100%;
+  margin-top: 8px;
+}
+.button:hover:not(:disabled) {
+  background: var(--principal-borda);
+  color: var(--principal-preenchimento);
+  border-color: var(--principal-preenchimento);
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} 

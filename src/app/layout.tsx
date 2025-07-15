@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
 import { Gochi_Hand } from "next/font/google"
+
 import { ClerkProvider } from "@clerk/nextjs";
+
+import type { Metadata } from "next";
 import './globals.css'
 const gochiHand = Gochi_Hand({
   subsets: ["latin"],
