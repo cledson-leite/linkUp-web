@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.clerkCard {
+  background: var(--background) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08) !important;
+  padding: 2rem !important;
+}
+
+.clerkButton {
+  background: var(--principal-preenchimento) !important;
+  color: var(--texto-principal) !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  border: 1px solid var(--principal-borda) !important;
+  transition: all 0.2s, border 0.2s !important;
+}
+
+.clerkButton:hover {
+  background: var(--secundario-preenchimento) !important;
+  border: 1px solid var(--secundario-borda) !important;
+}
+
+.clerkInput {
+  color: var(--texto-principal) !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--principal-borda) !important;
+  background: var(--principal-preenchimento)!important;
+}
+
+.clerkLabel {
+  color: var(--texto-principal) !important;
+  font-weight: 500 !important;
+}
+
+.socialButtonsIconButton {
+  background: white!important;
+  color: #222 !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  opacity: 1 !important;
+  transition: all 0.2s;
+}
+
+.socialButtonsIconButton:hover,
+.socialButtonsIconButton:focus {
+  opacity: 0.6 !important;
+}
+
+.socialButtonsIconButton svg {
+  color: #222 !important;
+} 

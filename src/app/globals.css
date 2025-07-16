@@ -15,9 +15,10 @@
   --texto-secundario: #666;
   --cinza-escuro: #AAA;
   --cinza-claro: #DDD;
-  --background: #FFF;
+  --background: #f5f6fa;
   --foreground: #444;
   --tint: #444;
+  --accent: var(--texto-secundario);
 }
 
 /* DARK MODE OVERRIDE */
@@ -70,8 +71,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-cl-card {
-  background-color: var(--background);
 }
