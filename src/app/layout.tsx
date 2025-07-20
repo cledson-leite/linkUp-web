@@ -2,6 +2,8 @@ import { Gochi_Hand } from "next/font/google"
 
 import { ClerkProvider } from "@clerk/nextjs";
 
+import ThemeProvider from "@/shared/provider/ThemeProvider"
+
 import type { Metadata } from "next";
 import './globals.css'
 const gochiHand = Gochi_Hand({
@@ -25,7 +27,14 @@ export default function RootLayout({
     <html lang="pt-BR">
       <ClerkProvider>
         <body className={gochiHand.variable}>
-          {children}
+          <ThemeProvider 
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </ClerkProvider>
     </html>
