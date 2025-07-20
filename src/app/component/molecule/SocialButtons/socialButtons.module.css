@@ -1,0 +1,23 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 12px;
+}
+.line {
+  flex: 1;
+  height: 1px;
+  width: 100%;
+  background-color: var(--texto-secundario);
+}
+
+.text {
+  font-size: 18px;
+  color: var(--texto-secundario);
+}

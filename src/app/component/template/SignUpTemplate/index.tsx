@@ -1,11 +1,11 @@
-import Button from '@/app/component/atom/Button'
+import SocialButtons from '@/app/component/molecule/SocialButtons'
 
 import styles from './signup.template.module.css'
 
 export default function SignUpTemplate() {
   return (
     <div className={styles.container}>
-      <Button />
+      <SocialButtons />
     </div>
   )
 }
