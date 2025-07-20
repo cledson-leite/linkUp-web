@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22rem;
+  height: 3rem;
+  background-color: var(--principal-preenchimento);
+  color: var(--texto-principal);
+  font-size: 1.5rem;
+  border: 2px solid var(--principal-borda);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container:hover {
+  background-color: var(--secundario-preenchimento);
+  border-color: var(--secundario-borda);
+}
