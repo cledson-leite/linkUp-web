@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.button {
+  width: 510px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 500px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--texto-secundario);
+}
+.link {
+  margin-left: 5px;
+  font-size: 22px;
+  color: var(--secundario-borda);
+}

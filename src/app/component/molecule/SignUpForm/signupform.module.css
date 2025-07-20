@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 20px 0;
@@ -11,14 +12,13 @@
   width: 245px;
 }
 .inputConfirmarSenha {
-  width: 225px;
+  width: 218px;
 }
 .input {
-  width: 480px;
+  width: 479px;
 }
 .containerLinha {
   display: flex;
   width: 500px;
-  padding: 10px 0;
-  gap: 10px;
+  gap: 11px;
 }

@@ -1,7 +1,12 @@
 import styles from './button.module.css';
 
-export default function Button({onClick, label='Button'}: {onClick?: () => void, label?: string}) {
+type ButtonProps = {
+  onClick?: () => void;
+  label?: string;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export default function Button({onClick, label='Button', ...props}: ButtonProps) {
   return (
-    <main className={styles.container} onClick={onClick}>{label}</main>
+    <main className={`${styles.container} ${props.className}`} onClick={onClick}>{label}</main>
   )
 }
