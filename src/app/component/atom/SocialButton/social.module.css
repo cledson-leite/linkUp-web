@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 16px;
+  border: 2px solid var(--principal-borda );
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.container:hover {
+  background-color: var(--sucesso-preenchimento);
+  transform: scale(1.1);
+}
