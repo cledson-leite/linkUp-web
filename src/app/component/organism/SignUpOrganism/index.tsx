@@ -11,6 +11,10 @@ import styles from './signup.organism.module.css'
 export default function SignUpOrganism() {
   return (
     <main className={styles.container}>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Cadastre-se</h1>
+        <p className={styles.subtitle}>Crie sua conta para começar a usar o LinkUp</p>
+      </div>
       <SocialButtons />
       <SignUpForm />
       <Button label='Cadastrar' className={styles.button} onClick={() => console.log('Cadastrar')}/>

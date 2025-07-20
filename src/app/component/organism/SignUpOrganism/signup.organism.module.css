@@ -3,8 +3,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  padding: 20px;
+  border: 2px solid var(--principal-borda);
+  border-radius: 20px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  margin: 25px;
+}
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--principal-borda);
+  margin-bottom: 10px;
 }
 .button {
   width: 510px;
