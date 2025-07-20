@@ -8,7 +8,7 @@ type InputProps = {
   variant?: 'default' | 'email' | 'number' | 'password';
   label: string;
   error?: string;
-} & React.HTMLAttributes<HTMLInputElement>;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 export default function Input({ error, variant = 'default', label = 'input', ...props }: InputProps) {
   if(variant === 'email') return <EmailInput label={label} {...props} />

@@ -11,7 +11,7 @@ type InputProps = {
 } & React.HTMLAttributes<HTMLInputElement>
 
 export default function PasswordInput({ label = 'input', ...props }: InputProps) {
-  const [obscureText, setObscureText] = useState(false);
+  const [obscureText, setObscureText] = useState(true);
   return (
     <main className={styles.main}>
       <label className={styles.label} htmlFor='input'>{label}</label>
@@ -22,7 +22,7 @@ export default function PasswordInput({ label = 'input', ...props }: InputProps)
           {...props} 
         />
         <div className={styles.icon} onClick={() => setObscureText(!obscureText)}>
-          {obscureText ? <FaEyeSlash size={24} /> : <FaEye size={24} />}
+          {obscureText ? <FaEye size={24} /> : <FaEyeSlash size={24} />}
         </div>
       </div>
     </main>

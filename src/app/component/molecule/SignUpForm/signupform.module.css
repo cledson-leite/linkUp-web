@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.inputNomeCompleto {
+  width: 245px;
+}
+.inputConfirmarSenha {
+  width: 225px;
+}
+.input {
+  width: 480px;
+}
+.containerLinha {
+  display: flex;
+  width: 500px;
+  padding: 10px 0;
+  gap: 10px;
+}
