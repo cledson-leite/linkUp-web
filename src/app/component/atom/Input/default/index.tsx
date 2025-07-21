@@ -8,10 +8,10 @@ type InputProps = {
 export default function DefaultInput({ label = 'input', className, error, ...props }: InputProps) {
   return (
     <main className={`${styles.main} ${ className }`}>
-      <label className={`${styles.label} ${ className }`} htmlFor='input'>{label}</label>
+      <label className={`${styles.label} ${ className }`} htmlFor={label}>{label}</label>
       <div className={`${styles.container} ${ className }`} >
         <input 
-          id='input' 
+          id={label} 
           type='text'
           {...props} 
         />

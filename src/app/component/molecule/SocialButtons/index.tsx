@@ -2,7 +2,7 @@
 
 import SocialButton from '@/app/component/atom/SocialButton'
 
-import styles from './socialButtons.module.css'
+import styles from './socialButtons.molecule.module.css'
 
 export default function SocialButtons() {
   return (

@@ -14,10 +14,10 @@ export default function PasswordInput({ label = 'input', ...props }: InputProps)
   const [obscureText, setObscureText] = useState(true);
   return (
     <main className={styles.main}>
-      <label className={styles.label} htmlFor='input'>{label}</label>
+      <label className={styles.label} htmlFor={label}>{label}</label>
       <div className={styles.container} >
         <input 
-          id='input' 
+          id={label}
           type={obscureText ? 'password' : 'text'} 
           {...props} 
         />

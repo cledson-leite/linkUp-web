@@ -7,10 +7,10 @@ type InputProps = {
 export default function NumberInput({label = 'input', ...props }: InputProps) {
   return (
     <main className={styles.main}>
-      <label className={styles.label} htmlFor='input'>{label}</label>
+      <label className={styles.label} htmlFor={label}>{label}</label>
       <div className={styles.container} >
         <input 
-          id='input' 
+          id={label} 
           type='number' 
           {...props} 
         />

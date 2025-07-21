@@ -13,5 +13,6 @@
 }
 .container:hover {
   background-color: var(--sucesso-preenchimento);
+  border-color: var(--sucesso-borda);
   transform: scale(1.1);
 }

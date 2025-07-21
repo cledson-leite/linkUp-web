@@ -7,6 +7,6 @@ type ButtonProps = {
 
 export default function Button({onClick, label='Button', ...props}: ButtonProps) {
   return (
-    <main className={`${styles.container} ${props.className}`} onClick={onClick}>{label}</main>
+    <button className={`${styles.container} ${props.className}`} onClick={onClick} {...props}>{label}</button>
   )
 }

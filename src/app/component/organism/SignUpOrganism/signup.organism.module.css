@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border: 2px solid var(--principal-borda);
   border-radius: 20px;
 }
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 25px;
+  margin-bottom: 15px;
 }
 .title {
   font-size: 32px;
@@ -21,15 +21,11 @@
   color: var(--principal-borda);
   margin-bottom: 10px;
 }
-.button {
-  width: 510px;
-}
 
 .footer {
   display: flex;
   justify-content: flex-end;
-  width: 500px;
-  margin-top: 20px;
+  width: 22rem;
   text-align: center;
   font-size: 18px;
   color: var(--texto-secundario);
