@@ -1,7 +1,5 @@
-import React from 'react'
+import SignInTemplate from "@/app/component/template/SignInTemplate";
 
 export default function SignInPage() {
-  return (
-    <div>SignInPage</div>
-  )
+  return <SignInTemplate />;
 }
