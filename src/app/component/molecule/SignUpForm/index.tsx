@@ -1,7 +1,9 @@
 'use client'
 
 
-import { useActionState } from 'react';
+import { useEffect, useActionState } from 'react';
+
+import { useRouter } from 'next/navigation';
 
 import Button from '@/app/component/atom/Button';
 import Input from '@/app/component/atom/Input'
@@ -41,7 +43,13 @@ async function cadastrarAction(
 }
 
 export default function SignUpForm() {
-  const [state, formAction, pending] = useActionState(cadastrarAction, { success: false });
+  const [state, formAction, pending] = useActionState(cadastrarAction, { success: false })
+  const router = useRouter();
+  useEffect(() => {
+    if (state.success) {
+      router.push('/verify')
+    }
+  }, [state.success, router])
   return (
     <form action={formAction} className={styles.container}>
       <Input
