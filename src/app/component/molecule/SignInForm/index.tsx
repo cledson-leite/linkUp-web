@@ -3,6 +3,8 @@
 
 import { useActionState } from 'react';
 
+import Link from 'next/link';
+
 import Button from '@/app/component/atom/Button';
 import Input from '@/app/component/atom/Input'
 import { signInSchema } from '@/shared/validation';
@@ -58,6 +60,7 @@ export default function SignInForm() {
         onChange={(e) => console.log(e.target.value)}
         error={state.errors?.password}
       />
+      <Link href='/forget' className={styles.forget}>Esqueceu a senha?</Link>
       <Button
           type="submit"
           label={pending ? 'Entrando...' : 'Entrar'}

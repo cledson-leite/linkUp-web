@@ -1,9 +1,7 @@
+import { InputProps } from '..';
 import styles from '../input.module.css';
 
-type InputProps = {
-  label: string,
-  error?: string;
-} & React.HTMLAttributes<HTMLInputElement>
+
 
 export default function DefaultInput({ label = 'input', className, error, ...props }: InputProps) {
   return (

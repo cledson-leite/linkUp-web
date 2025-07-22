@@ -16,3 +16,10 @@ export const signInSchema = z.object({
 });
 
 export type SignInData = z.infer<typeof signInSchema>;
+
+export const forgetSchema = z.object({
+  code: z.string().min(6, 'Token inválido.'),
+  password: z.string().min(6, 'A senha deve ter no mínimo 6 caracteres.'),
+});
+
+export type ForgetData = z.infer<typeof forgetSchema>;

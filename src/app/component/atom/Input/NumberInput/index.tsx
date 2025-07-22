@@ -1,10 +1,7 @@
+import { InputProps } from '..';
 import styles from '../input.module.css';
 
-type InputProps = {
-  label: string
-} & React.HTMLAttributes<HTMLInputElement>
-
-export default function NumberInput({label = 'input', ...props }: InputProps) {
+export default function NumberInput({label = 'input', error,...props }: InputProps) {
   return (
     <main className={styles.main}>
       <label className={styles.label} htmlFor={label}>{label}</label>
@@ -14,6 +11,7 @@ export default function NumberInput({label = 'input', ...props }: InputProps) {
           type='number' 
           {...props} 
         />
+        {error && <p className={styles.error}>{error}</p>}
       </div>
     </main>
   )

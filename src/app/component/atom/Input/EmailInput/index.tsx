@@ -1,10 +1,7 @@
+import { InputProps } from '..';
 import styles from '../input.module.css';
 
-type InputProps = {
-  label: string
-} & React.HTMLAttributes<HTMLInputElement>
-
-export default function EmailInput({label = 'input', ...props }: InputProps) {
+export default function EmailInput({label = 'input', error,...props }: InputProps) {
   return (
     <main className={styles.main}>
       <label className={styles.label} htmlFor={label}>{label}</label>
@@ -14,6 +11,7 @@ export default function EmailInput({label = 'input', ...props }: InputProps) {
           type='email' 
           {...props} 
         />
+        {error && <p className={styles.error}>{error}</p>}
       </div>
     </main>
   )

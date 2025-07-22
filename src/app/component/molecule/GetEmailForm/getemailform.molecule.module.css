@@ -10,11 +10,3 @@
 .input {
   width: 25rem;
 }
-.forget {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  margin-right: 10px;
-  font-size: 22px;
-  color: var(--principal-borda);
-}
