@@ -1,6 +1,7 @@
 import { Gochi_Hand } from "next/font/google"
 
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "sonner";
 
 import ThemeProvider from "@/shared/provider/ThemeProvider"
 
@@ -34,6 +35,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Toaster position="top-right" richColors/>
           </ThemeProvider>
         </body>
       </ClerkProvider>

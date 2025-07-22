@@ -11,7 +11,7 @@ export default function Index() {
   const router = useRouter()
   useEffect(() => {
     if (!userId) {
-      router.push("/sign-up");
+      router.push("/sign-in");
     } else {
       router.push("/home");
     }

@@ -19,6 +19,14 @@
   --foreground: #444;
   --tint: #444;
   --accent: var(--texto-secundario);
+
+  --toast-bg: var(--alerta-preenchimento);
+  --toast-border: var(--alerta-borda);
+  --toast-color: var(--texto-principal);
+  --toast-border-radius: 10px;
+  --toast-success-bg: var(--sucesso-preenchimento);
+  --toast-success-border-: var(--sucesso-borda);
+  --toast-error-border: var(--alerta-borda);
 }
 
 /* DARK MODE OVERRIDE */
@@ -39,7 +47,23 @@
     --background: #222;
     --foreground: #fff;
     --tint: #fff;
+
+
+  --toast-bg: var(--alerta-preenchimento);
+  --toast-border: var(--alerta-borda);
+  --toast-color: var(--texto-principal);
+  --toast-border-radius: 10px;
+  --toast-success-bg: var(--sucesso-preenchimento);
+  --toast-error-bg: var(--alerta-preenchimento);
   }
+}
+
+.toast-success {
+  border: 2px solid var(--sucesso-borda);
+}
+
+.toast-error {
+  border: 2px solid var(--alerta-borda);
 }
 
 html,

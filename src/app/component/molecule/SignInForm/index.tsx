@@ -1,49 +1,31 @@
 'use client'
 
 
-import { useActionState } from 'react';
+import { useActionState, useEffect } from 'react';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
+import { toast } from 'sonner';
 
 import Button from '@/app/component/atom/Button';
 import Input from '@/app/component/atom/Input'
-import { signInSchema } from '@/shared/validation';
+import { useSignInVM } from '@/view-model/hook/useSignInVM';
 
 import styles from './signinform.molecule.module.css'
 
-
-async function cadastrarAction(
-  _prevState: { success: boolean; error?: string },
-  formData: FormData
-) {
-  const data = {
-    firstname: formData.get('firstname'),
-    lastname: formData.get('lastname'),
-    email: formData.get('email'),
-    password: formData.get('password'),
-  };
-
-  // Validação com Zod
-  const result = signInSchema.safeParse(data);
-  if (!result.success) {
-    const fieldErrors = result.error.issues.reduce((acc, issue) => {
-      const field = issue.path[0] as string;
-      acc[field] = issue.message;
-      return acc;
-    }, {} as Record<string, string>);
-
-    return { success: false, errors: fieldErrors };
-  }
-
-  // Simula chamada de API
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
-  console.log('Entrada de usuário:', result.data);
-  return { success: true };
-}
-
 export default function SignInForm() {
-  const [state, formAction, pending] = useActionState(cadastrarAction, { success: false });
+  const router = useRouter()
+  const {action, stateSignIn} = useSignInVM()
+  const [state, formAction, pending] = useActionState(action, { success: false, errors: undefined });
+  useEffect(() => {
+    if (stateSignIn.errors?.global) {
+      toast.error(stateSignIn.errors.global);
+    }
+    if (stateSignIn.success) {
+      router.push('/home')
+    }
+  }, [stateSignIn.errors?.global, stateSignIn.success, router, state])
   return (
     <form action={formAction} className={styles.container}>
       <Input
