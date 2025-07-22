@@ -5,10 +5,16 @@ export const signUpSchema = z.object({
   firstname: z.string().min(3, 'O nome deve ter no mínimo 3 caracteres.'),
   lastname: z.string().min(3, 'O sobrenome deve ter no mínimo 3 caracteres.'),
   email: z.email('Email inválido.'),
-  password: z.string().min(6, 'A senha deve ter no mínimo 6 caracteres.'),
+  password: z.string().min(8, 'A senha deve ter no mínimo 8 caracteres.'),
 });
 
 export type SignUpData = z.infer<typeof signUpSchema>;
+
+export const VerifySchema = z.object({
+  code: z.string().min(6, 'Token inválido.'),
+});
+
+export type VerifyData = z.infer<typeof signUpSchema>;
 
 export const signInSchema = z.object({
   email: z.email('Email inválido.'),
