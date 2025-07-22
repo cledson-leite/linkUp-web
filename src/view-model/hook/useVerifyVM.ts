@@ -4,8 +4,6 @@ import { useState, useTransition } from "react";
 
 import { useSignUp } from "@clerk/nextjs";
 
-import { VerifyController } from "@/controller/auth/verify.controller";
-import { ClerkRepository } from "@/model/repositoy/clerk.repository";
 import { VerifySchema } from "@/shared/validation";
 
 type VerifyState = {
@@ -15,9 +13,7 @@ type VerifyState = {
 };
 
 export const useVerifyVM = () => {
-  const {signUp} = useSignUp()
-  const repository = new ClerkRepository(signUp!)
-  const controller = new VerifyController(repository)
+  const {signUp, setActive} = useSignUp()
   const [state, setState] = useState<VerifyState>({ success: false, errors: undefined, verifing: false });
   const [pending, startTransition] = useTransition()
 
@@ -40,10 +36,17 @@ export const useVerifyVM = () => {
     }
     startTransition(async () => {
       try {
-        await controller.verifyToken(result.data.code)
+        const attempt = await signUp?.attemptEmailAddressVerification({
+          code: result.data.code!
+        })
+        if(attempt?.status !== 'complete') {
+          setState({ success: false, errors: { code: 'Token inválido' }, verifing: true });
+          return
+        }
+        await setActive?.({ session: attempt.createdSessionId })
         setState({ success: true, errors: undefined, verifing: false })
       } catch (error: any) {
-        setState({ success: false, errors: { global: error.message || 'Erro ao cadastrar' }, verifing: true });
+        setState({ success: false, errors: { code: error.message || 'Erro ao cadastrar' }, verifing: true });
       }
     });
     return { success: true, errors: undefined, verifing: true };

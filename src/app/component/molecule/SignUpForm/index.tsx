@@ -31,27 +31,23 @@ export default function SignUpForm() {
       <Input
         label='Nome'
         name='firstname'
-        onChange={(e) => console.log(e.target.value)}
         error={stateSignup.errors?.firstname}
       />
       <Input
         label='Sobrenome'
         name='lastname'
-        onChange={(e) => console.log(e.target.value)}
         error={stateSignup.errors?.lastname}
       />
       <Input
         variant="email"
         label="Email"
         name="email"
-        onChange={(e) => console.log(e.target.value)}
         error={stateSignup.errors?.email}
       />
       <Input
         variant="password"
         label="Senha"
         name="password"
-        onChange={(e) => console.log(e.target.value)}
         error={stateSignup.errors?.password || stateSignup.errors?.global}
       />
       <Button

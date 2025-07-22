@@ -30,7 +30,7 @@ export default function VerifyForm() {
       <Input
         label="Código de Verificação"
         name="code"
-        // onChange={(e) => console.log(e.target.value)}
+        error={state.errors?.code}
       />
       <Button
         type="submit"
