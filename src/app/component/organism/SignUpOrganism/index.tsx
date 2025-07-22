@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import SignUpForm from '@/app/component/molecule/SignUpForm';
-import SocialButtons from '@/app/component/molecule/SocialButtons';
 
 import styles from './signup.organism.module.css';
 
@@ -15,7 +14,6 @@ export default function SignUpOrganism() {
         <h1 className={styles.title}>Cadastre-se</h1>
         <p className={styles.subtitle}>Crie sua conta para começar a usar o LinkUp</p>
       </div>
-      <SocialButtons />
       <SignUpForm />
       <div className={styles.footer}>
         <p>
