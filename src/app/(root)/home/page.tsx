@@ -1,7 +1,5 @@
-import React from 'react'
+import ChatTemplate from "@/app/component/template/ChatTemplate";
 
 export default function HomePage() {
-  return (
-    <div>HomePage</div>
-  )
+  return <ChatTemplate />
 }
