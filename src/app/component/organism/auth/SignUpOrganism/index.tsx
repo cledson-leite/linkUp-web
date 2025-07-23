@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import SignUpForm from '@/app/component/molecule/SignUpForm';
+import SignUpForm from '@/app/component/molecule/auth/SignUpForm';
 
 import styles from './signup.organism.module.css';
 

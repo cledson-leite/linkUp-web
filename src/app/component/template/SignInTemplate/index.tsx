@@ -1,4 +1,4 @@
-import SignInOrganism from '@/app/component/organism/SignInOrganism'
+import SignInOrganism from '@/app/component/organism/auth/SignInOrganism'
 
 import styles from './signin.template.module.css'
 

@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 
 import Button from '@/app/component/atom/Button';
 import Input from '@/app/component/atom/Input'
-import { useSignInVM } from '@/view-model/hook/useSignInVM';
+import { useSignInVM } from '@/view-model/hook/auth/useSignInVM';
 
 import styles from './signinform.molecule.module.css'
 

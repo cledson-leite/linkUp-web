@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 
 import Button from '@/app/component/atom/Button';
 import Input from '@/app/component/atom/Input'
-import { useVerifyVM } from '@/view-model/hook/useVerifyVM';
+import { useVerifyVM } from '@/view-model/hook/auth/useVerifyVM';
 
 import styles from './verifyform.molecule.module.css'
 

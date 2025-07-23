@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import SignInForm from '@/app/component/molecule/SignInForm';
-import SocialButtons from '@/app/component/molecule/SocialButtons';
+import SignInForm from '@/app/component/molecule/auth/SignInForm';
+import SocialButtons from '@/app/component/molecule/auth/SocialButtons';
 
 import styles from './signin.organism.module.css';
 

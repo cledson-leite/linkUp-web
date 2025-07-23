@@ -1,4 +1,4 @@
-import VerifyOrganism from '@/app/component/organism/VerifyOrganism'
+import VerifyOrganism from '@/app/component/organism/auth/VerifyOrganism'
 
 import styles from './verify.template.module.css'
 

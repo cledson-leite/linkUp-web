@@ -1,4 +1,4 @@
-import VerifyForm from '@/app/component/molecule/VerifyForm';
+import VerifyForm from '@/app/component/molecule/auth/VerifyForm';
 
 import styles from './verify.organism.module.css';
 

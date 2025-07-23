@@ -23,6 +23,12 @@ export const signInSchema = z.object({
 
 export type SignInData = z.infer<typeof signInSchema>;
 
+export const getemailSchema = z.object({
+  email: z.email('Email inválido.')
+});
+
+export type GetemailData = z.infer<typeof forgetSchema>;
+
 export const forgetSchema = z.object({
   code: z.string().min(6, 'Token inválido.'),
   password: z.string().min(6, 'A senha deve ter no mínimo 6 caracteres.'),

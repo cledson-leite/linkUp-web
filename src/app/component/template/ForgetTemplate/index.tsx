@@ -1,4 +1,4 @@
-import ForgetOrganism from '@/app/component/organism/ForgetOrganism'
+import ForgetOrganism from '@/app/component/organism/auth/ForgetOrganism'
 
 import styles from './forget.template.module.css'
 

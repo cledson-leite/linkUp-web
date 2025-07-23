@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 import Button from '@/app/component/atom/Button';
 import Input from '@/app/component/atom/Input'
-import { useSignupVM } from '@/view-model/hook/useSignupVM';
+import { useSignupVM } from '@/view-model/hook/auth/useSignupVM';
 
 import styles from './signupform.molecule.module.css'
 

@@ -39,15 +39,14 @@ async function cadastrarAction(
   console.log('validando usuário:', data);
   return { success: true };
 }
-export default function ForgetForm({setSuccess}: {setSuccess: (success: boolean) => void}) {
+export default function ForgetForm() {
   const [state, formAction, pending] = useActionState(cadastrarAction, { success: false });
   const router = useRouter();
   useEffect(() => {
     if (state.success) {
       router.push('/home')
-      setSuccess(false);
     }
-  }, [state.success, setSuccess, router]);
+  }, [state.success, router]);
   return (
     <form action={formAction} className={styles.container}>
       <Input
